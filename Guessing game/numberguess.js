@@ -1,6 +1,6 @@
 
-    var knapp = document.querySelector("knappID");
-    var input = document.querySelector("inputID")
+    var knapp = document.querySelector("#knappID");
+    var input = document.querySelector("#inputID");
 
     function sjekkTall(){
     console.log(input.value)
