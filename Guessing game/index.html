@@ -12,22 +12,12 @@
  <div class=""guess_box>
     <h1>Guess a number</h1>
     <input type="number" id="input_field">
-    <button>Guess</button>
+    <button id="knappID">Guess</button>
  </div>
 
 
- <script>
-
-    var knapp = document.querySelector("knappID");
-    var input = document.querySelector("inputID")
-
-    function sjekkTall(){
-    console.log(input.value)
-    }
+ <script src="numberguess.js"></script>
 
 
-    knapp.addEventListener("click", sjekkTall);
-    
- </script>
 </body>
 </html>
