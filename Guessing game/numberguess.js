@@ -1,12 +1,15 @@
-
 var number = Math.floor(Math.random() * 100) + 1;
 var guesses = 10
+var playing = false;
+var new_game = true;
 
-    var knapp = document.querySelector("#knappID");
-    var restart = document.querySelector("#restartID");
-    var input = document.querySelector("#inputID");
-    var output = document.getElementById("output");
-    console.log(number);
+
+var knapp = document.querySelector("#knappID");
+var restart = document.querySelector("#restartID");
+var input = document.querySelector("#inputID");
+var output = document.getElementById("output");
+console.log(number);
+
 
     function sjekkTall(){
         console.log(input.value)
@@ -29,18 +32,20 @@ var guesses = 10
 
     knapp.addEventListener("click", sjekkTall);
 
-    // restart function
-    function restart(){
-        guesses = 10;
-        score = 0;
-        number = Math.floor(Math.random() * 100) + 1;
+
+// restart
+function restart(){
+    guesses = 10;
+    number = Math.floor(Math.random() * 100) + 1;
 }
+    knapp.addEventListener("press", restart);
 
 
-    addEventListener('keyup', (event) => {
-        if (event.key == 'Enter'){
-            check_number(); // funksjon som skal kjøres 
-        }    
-    })
+// enter key
+addEventListener('keyup', (event) => {
+    if (event.key == 'Enter'){
+        sjekkTall(); // funksjon som skal kjøres 
+    }    
+})
     
                                               
